@@ -1,3 +1,4 @@
+#requirements.txt
 flask
 flask-sqlalchemy
 psycopg2-binary  # For PostgreSQL
@@ -5,3 +6,4 @@ flask-login
 Flask-Migrate
 passlib
 python-dotenv
+PyJWT
