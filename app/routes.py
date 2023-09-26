@@ -3,6 +3,7 @@ import jwt
 import datetime
 from app import app, db
 from app.models import User
+from app.decorators.jwt_decorators import token_required
 
 @app.route('/register', methods=['POST'])
 def register():
@@ -31,3 +32,8 @@ def login():
 
         return jsonify({'token': token})
     return jsonify({"message": "Invalid credentials"}), 401
+
+@app.route('/validate', methods=['GET'])
+@token_required
+def validate():
+    return jsonify({"message": "Token has been validated"})
