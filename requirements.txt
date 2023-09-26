@@ -7,3 +7,4 @@ Flask-Migrate
 passlib
 python-dotenv
 PyJWT
+Flask-Mail
