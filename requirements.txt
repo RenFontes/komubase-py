@@ -8,3 +8,4 @@ passlib
 python-dotenv
 PyJWT
 Flask-Mail
+itsdangerous

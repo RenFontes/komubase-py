@@ -7,6 +7,7 @@ class User(db.Model):
     id = db.Column(BigIntegerType, primary_key=True, autoincrement=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(120), nullable=False)
+    email_confirmed = db.Column(db.Boolean, nullable=False, default=False)
 
     @classmethod
     def hash_password(cls, password):

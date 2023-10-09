@@ -4,10 +4,12 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///./site.db')  # Fallback to SQLite
     SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECURITY_PASSWORD_SALT = os.environ.get('SECURITY_PASSWORD_SALT')
 
     # Mail settings
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT'))
+    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     MAIL_USE_TLS = False
